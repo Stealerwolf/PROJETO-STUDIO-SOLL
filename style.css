@@ -1,23 +1,23 @@
-.body{
-     background-color: black;
-     background-image: linear-gradient(to bottom, black 0%, black 33%, grey 33%, grey 66%, black 66%, black 100%);
-    min-height: 300vh;
+.body{ /* propriedades css do corpo do site */
+     background-color: black;  /* cor de fundo da página */
+     background-image: linear-gradient(to bottom, black 0%, black 33%, grey 33%, grey 66%, black 66%, black 100%); /* código pra dividir a página em cores */
+    min-height: 300vh; /* código para ditar o tamanho mínimo das divisões de cores. (abaixo disso a cor da "segunda página "toca" nos elementos da "primeira págima" */ 
  
 }
 
-.h2{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    color: #9B794E;
+.h2{ /* texto abaixo da logo studio soll */
+    text-align: center; /* centralizar o texto no meio da tela */
+    font-family: Arial, Helvetica, sans-serif; /* o estilo de fonte do texto */
+    font-size: 50px; /* o tamanho da fonte */
+    color: #9B794E; /* a cor das letras */
 }
 
-.h1logo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 180px;
-    height: 150px;
+.h1logo{ /* propriedades de css da logo studio soll */
+    display: block; /*centralizar a imagem no meio da tela */
+    margin-left: auto; /*margem automatica do lado esquerdo */
+    margin-right: auto; /*margem automatica do lado direito*/
+    width: 180px; /* largura da imagem */
+    height: 150px; /* altura da imagem */
 }
 
 .title{
@@ -25,6 +25,25 @@
 }
 
 .h3video{
-    text-align: center;
+    text-align: center; /* código pra alinhar o video do youtube no centro */
 }
 
+#BOTAO {
+    display: none; /* Enquanto o usuário não mexe a tela, ele fica escondido */
+    position: fixed; /* Botão fica colado */
+    bottom: 20px; /* Coloca o botão na parte debaixo da página */
+    right: 30px; /* deixa o botão com 30px de distância do lado direito da tela */
+    z-index: 99; /* Pra ter certeza que o botão nao vá ficar escondido abaixo de outro elemento na página */
+    border: none; /* Remove as bordas */
+    outline: none; /* Remove outline */
+    background-color: #9B794E; /* Cor de fundo do botão */
+    color: black; /* Cor do texto */
+    cursor: pointer; /* Adiciona o ponteiro do mouse ao passar o mesmo em cima */
+    padding: 15px; /* padding pra não "encostar na tela" */
+    border-radius: 10px; /* Cantos arredondados */
+    font-size: 18px; /* aumnentar tamanho da fonte */
+  }
+  
+  #BOTAO:hover {
+    background-color: #555; /* Mostra outra cor quando passam o mouse por cima */
+  }
