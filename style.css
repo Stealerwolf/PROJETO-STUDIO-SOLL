@@ -1,7 +1,7 @@
 .body{ /* propriedades css do corpo do site */
      background-color: black;  /* cor de fundo da página */
-     background-image: linear-gradient(to bottom, black 0%, black 33%, grey 33%, grey 66%, black 66%, black 100%); /* código pra dividir a página em cores */
-    min-height: 300vh; /* código para ditar o tamanho mínimo das divisões de cores. (abaixo disso a cor da "segunda página "toca" nos elementos da "primeira págima" */ 
+     background-image: linear-gradient(to bottom, white 0%, white 33%, grey 33%, grey 66%, white 66%, white 100%); /* código pra dividir a página em cores */
+    min-height: 300vh; /* código para ditar o tamanho mínimo das divisões de cores. (abaixo disso a cor da "segunda página "toca" nos elementos da "primeira página" */ 
  
 }
 
@@ -39,7 +39,7 @@
     background-color: #9B794E; /* Cor de fundo do botão */
     color: black; /* Cor do texto */
     cursor: pointer; /* Adiciona o ponteiro do mouse ao passar o mesmo em cima */
-    padding: 15px; /* padding pra não "encostar na tela" */
+    padding: 15px; /* adiciona um espaço para não tocar nas palavras */
     border-radius: 10px; /* Cantos arredondados */
     font-size: 18px; /* aumnentar tamanho da fonte */
   }
@@ -47,3 +47,24 @@
   #BOTAO:hover {
     background-color: #555; /* Mostra outra cor quando passam o mouse por cima */
   }
+
+  .box{
+    color: red;
+    font-size: 50px;
+    margin-left: 50%;
+    position: fixed;
+    bottom: -10px;
+    transform: translate(-50%, -50%);
+    background-color: #9B794E;
+    border-radius: 10px;
+    z-index: 99;
+    padding: 15px;
+    background-image: linear-gradient(to right, black 0%, black 50%, red 50%, red 100%);
+  }
+
+ 
+
+ 
+
+ 
+  
