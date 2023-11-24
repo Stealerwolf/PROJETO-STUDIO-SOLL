@@ -47,10 +47,12 @@
   #BOTAO:hover {
     background-color: #555; /* Mostra outra cor quando passam o mouse por cima */
   }
+  
 
   .box{
-    color: red;
-    font-size: 50px;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Poppings', sans-serif;
     margin-left: 50%;
     position: fixed;
     bottom: -10px;
@@ -58,11 +60,17 @@
     background-color: #9B794E;
     border-radius: 10px;
     z-index: 99;
-    padding: 15px;
-    background-image: linear-gradient(to right, black 0%, black 50%, red 50%, red 100%);
+    padding: 10px;
+    background-image: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, yellow 66%, yellow 99%);
   }
 
- 
+ nav a {
+  padding: 0 23px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: green;
+ }
 
  
 
