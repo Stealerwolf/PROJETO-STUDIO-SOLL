@@ -36,8 +36,8 @@
     z-index: 99; /* Pra ter certeza que o botão nao vá ficar escondido abaixo de outro elemento na página */
     border: none; /* Remove as bordas */
     outline: none; /* Remove outline */
-    background-color: #9B794E; /* Cor de fundo do botão */
-    color: black; /* Cor do texto */
+    background-color: black; /* Cor de fundo do botão */
+    color: #878681; /* Cor do texto */
     cursor: pointer; /* Adiciona o ponteiro do mouse ao passar o mesmo em cima */
     padding: 15px; /* adiciona um espaço para não tocar nas palavras */
     border-radius: 10px; /* Cantos arredondados */
@@ -45,7 +45,11 @@
   }
   
   #BOTAO:hover {
-    background-color: #555; /* Mostra outra cor quando passam o mouse por cima */
+    background-color: #878681; /* Mostra outra cor quando passam o mouse por cima */
+    background-image: linear-gradient(45deg, black , #9B794E); /* cor da caixa do botão quando passam o mouse por cima */
+    color: black; /* cor das letras do botao quando se passa o mouse por cima */
+    transition: .3s;
+  
   }
   
 
@@ -55,23 +59,51 @@
     font-family: 'Poppings', sans-serif;
     margin-left: 50%;
     position: fixed;
-    bottom: -10px;
+    bottom: -8px;
     transform: translate(-50%, -50%);
-    background-color: #9B794E;
+    background: rgba(0, 0, 0, 0.6); /* cor do fundo da caixa, sendo o ultimo valor à direita a opacidade*/
     border-radius: 10px;
     z-index: 99;
     padding: 10px;
-    background-image: linear-gradient(to right, black 0%, black 33%, red 33%, red 66%, yellow 66%, yellow 99%);
+    padding-left: 0px;
+    padding-right: 0px;
+    
   }
 
  nav a {
-  padding: 0 23px;
+  padding: 0 10px;
   text-decoration: none;
   position: relative;
   display: inline-block;
-  color: green;
+  color: #9B794E;
+  z-index: 1;
  }
 
+nav span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 85px;
+  height: 100%;
+  border-radius: 10px;
+  transition: .2s;
+  background: linear-gradient(45deg , black ,#9B794E);
+}
+
+nav a:nth-child(1):hover~span{
+  left: 0;
+}
+
+nav a:nth-child(2):hover~span{
+  left: 98px;
+}
+
+nav a:nth-child(3):hover~span{
+  left: 195px;
+  width: 113px;
+}
+ 
  
 
  
