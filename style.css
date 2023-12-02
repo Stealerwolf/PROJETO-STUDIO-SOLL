@@ -1,7 +1,11 @@
+
 .body{ /* propriedades css do corpo do site */
      background-color: black;  /* cor de fundo da página */
-     background-image: linear-gradient(to bottom, white 0%, white 33%, grey 33%, grey 66%, white 66%, white 100%); /* código pra dividir a página em cores */
+     background-image: linear-gradient(to bottom, black 0%, black 33%, grey 33%, grey 66%, black 66%, black 100%); /* código pra dividir a página em cores */
     min-height: 300vh; /* código para ditar o tamanho mínimo das divisões de cores. (abaixo disso a cor da "segunda página "toca" nos elementos da "primeira página" */ 
+    margin-left: -40px;
+    z-index: 998;
+    overflow-x: hidden;
  
 }
 
@@ -44,6 +48,7 @@
     padding: 10px; /* adiciona um espaço para não tocar nas palavras */
     border-radius: 10px; /* Cantos arredondados */
     font-size: 25px; /* aumnentar tamanho da fonte */
+    z-index: 999;
   }
   
   #BOTAO:hover {
@@ -51,6 +56,7 @@
     background-image: linear-gradient(45deg, black , #9B794E); /* cor da caixa do botão quando passam o mouse por cima */
     color: black; /* cor das letras do botao quando se passa o mouse por cima */
     transition: .3s;
+    z-index: 999;
   
   }
   
@@ -69,6 +75,7 @@
     padding: 10px;
     padding-left: 0px;
     padding-right: 0px;
+    z-index: 999;
     
   }
 
@@ -79,10 +86,13 @@
   display: inline-block;
   color: #878681;
   z-index: 1;
+  
+
  }
 
 nav span{
   position: absolute;
+  visibility: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -91,6 +101,10 @@ nav span{
   border-radius: 10px;
   transition: .2s;
   background: black;
+}
+
+nav:hover span{
+  visibility: visible;
 }
 
 nav a:nth-child(1):hover~span{
@@ -106,7 +120,66 @@ nav a:nth-child(3):hover~span{
   width: 113px;
 }
  
- 
+h1 { margin:150px auto 30px auto; text-align:center;}
+.container {
+  position: relative;
+  background: transparent;
+  max-width: 2000px;
+  min-width: 2000px;
+  height: 610px;
+  margin: 0 auto;
+  overflow: hidden;
+  top: 300px;
+  left: 0px;
+  z-index: 99;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  width: 1000px;
+  height: 600px;
+  background: #ED5565;
+  margin: 5px;
+  border-radius:3px;
+  transition: transform 0.5s, background 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.active {
+  background: blue;
+  transform: translate(-50%, -50%) scale(1.1) !important;
+}
+.card:nth-child(1) { transform: translate(-170%, -50%); }
+
+.card:nth-child(2) { transform: translate(-50%, -50%); }
+
+.card:nth-child(3) { transform: translate(70%, -50%); }
+
+.card:nth-child(4) { transform: translate(190%, -50%); }
+
+
+
+.next .card:nth-child(1) { transform: translate(-290%, -50%); }
+
+.next .card:nth-child(2) { transform: translate(-170%, -50%); }
+
+.next .card:nth-child(3) { transform: translate(-50%, -50%); }
+
+.next .card:nth-child(4) { transform: translate(70%, -50%); }
+
+.reset .card { transition: none; }
+
+.reset .card .card:nth-child(1) { transform: translate(-170%, -50%); }
+
+.reset .card .card:nth-child(2) { transform: translate(-50%, -50%); }
+
+.reset .card .card:nth-child(3) { transform: translate(70%, -50%); }
+
+.reset .card .card:nth-child(4) { transform: translate(190%, -50%); }
 
  
   
