@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 
 <html>
+  <!--inicio HEAD-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <h1><img src="LOGO.png" alt="Studio Soll" class="h1logo" /></h1>
+    <h2 class="h2">Conheça-nos através deste video</h2>
 
-    <!--inicio HEAD-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <h1><img src="LOGO.png" alt="Studio Soll" class="h1logo"></h1>
-        <h2 class="h2">Conheça-nos através deste video</h2>
+    <h3 class="h3video">
+      <iframe
+        width="700"
+        height="400"
+        src="https://www.youtube.com/embed/BFmH7moCL2c?si=3SHKI5bax7DCRwuU"
+      >
+      </iframe>
+    </h3>
 
-        <h3 class="h3video"> <iframe width="700" height="400"
-            src="https://www.youtube.com/embed/BFmH7moCL2c?si=3SHKI5bax7DCRwuU">
-        </iframe> 
-        </h3>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--fim HEAD-->
 
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-     <!--fim HEAD-->
+  <!--Inicio BODY-->
+  <body class="body">
+    <nav class="box">
+      <a href="#">Home</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+      <span></span>
+    </nav>
+    <!--CODIGO DO  BOTÃO-->
+    <button onclick="topFunction()" id="BOTAO" title="Ir para o topo">
+      Inicio
+    </button>
+    <!--CODIGO DO  BOTÃO-->
+    <!--Código do botão em javascript-->
+    <script>
+      // Pegar o botão pelo ID:
+      let mybutton = document.getElementById("BOTAO");
 
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-     <!--Inicio BODY-->
-    <body class="body">
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
 
-        <nav class="box">
-              <a href="#">Home</a>
-              <a href="#">Sobre</a>
-              <a href="#">Contato</a>
-              <span></span>
-          </nav>
-         <!--CODIGO DO  BOTÃO-->
-        <button onclick="topFunction()" id="BOTAO" title="Ir para o topo">Inicio</button>
-         <!--CODIGO DO  BOTÃO-->
-        <!--Código do botão em javascript-->
-        <script>
-            // Pegar o botão pelo ID:
-            let mybutton = document.getElementById("BOTAO");
-    
-            // When the user scrolls down 20px from the top of the document, show the button
-             window.onscroll = function() {scrollFunction()};
+      // Quando o usuário clicar no botão, ele vai para o topo da página
+      function topFunction() {
+        document.body.scrollTop = 0; // Para Safari
+        document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+      }
+    </script>
 
-            function scrollFunction() {
-             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-             mybutton.style.display = "block";
-              } else {
-               mybutton.style.display = "none";
-                  }
-             }   
+    <!--codigo do card slider-->
+    <div class="container">
+      <div class="card"></div>
+      <div class="card active"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <script>
+      let holder = document.querySelectorAll(".container")[0],
+        cards = document.querySelectorAll(".card");
 
-             // Quando o usuário clicar no botão, ele vai para o topo da página
-             function topFunction() {
-             document.body.scrollTop = 0; // Para Safari
-             document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
-             } 
-        </script>
-        
-         <!--codigo do card slider-->
-        <div class="container">
-  
-            <div class="card"></div>
-            <div class="card active"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-          </div>
-          <script>
-          let holder = document.querySelectorAll('.container')[0],
-            cards = document.querySelectorAll('.card');
-          
-          let preActiveCard = cards[1];
-          let nextActiveCard = cards[2];
-          
-          function scrollLeft() {
-            holder.classList.remove('next');
-            holder.classList.remove('reset');
-            holder.classList.add('next');
-            
-            preActiveCard.classList.remove('active');
-            nextActiveCard.classList.add('active');
-            setTimeout(reset, 600);
-          }
-          
-          function reset() {
-            holder.classList.remove('next');
-            holder.classList.add('reset');
-            preActiveCard.classList.add('active');
-            nextActiveCard.classList.remove('active');
-          }
-          
-          setInterval(scrollLeft, 3000);
-          
-          
-          </script>
-          <!--fim do codigo do card slider-->
-          
-    </body>
-    <!--fim BODY-->
+      let preActiveCard = cards[1];
+      let nextActiveCard = cards[2];
 
+      function scrollLeft() {
+        holder.classList.remove("next");
+        holder.classList.remove("reset");
+        holder.classList.add("next");
+
+        preActiveCard.classList.remove("active");
+        nextActiveCard.classList.add("active");
+        setTimeout(reset, 600);
+      }
+
+      function reset() {
+        holder.classList.remove("next");
+        holder.classList.add("reset");
+        preActiveCard.classList.add("active");
+        nextActiveCard.classList.remove("active");
+      }
+
+      setInterval(scrollLeft, 3000);
+    </script>
+    <!--fim do codigo do card slider-->
+    <img src="cat.jpeg" alt="Perfil" class="cat" />
+  </body>
+  <!--fim BODY-->
 </html>
