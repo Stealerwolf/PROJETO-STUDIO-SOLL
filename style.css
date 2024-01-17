@@ -16,12 +16,37 @@
   overflow-x: hidden;
 }
 
+.h1third {
+  display: block; /*centralizar a imagem no meio da tela */
+  margin-left: auto; /*margem automatica do lado esquerdo */
+  margin-right: auto; /*margem automatica do lado direito*/
+  color: #9b794e;
+  font-size: 50px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 1850px;
+  left: 800px;
+  white-space: nowrap;
+}
+
+.h2third {
+  color: #9b794e;
+  font-size: 50px;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 2100px;
+  left: 100px;
+  line-break: auto;
+  margin: 0 auto;
+}
+
 .cat {
   position: absolute;
   border-radius: 500px;
-  top: 2300px;
-  left: 20px;
-  font-size: 18px;
+  top: 2100px;
+  left: 1200px;
+  font-size: 50px;
+  width: 500px;
 }
 
 .h2 {
@@ -160,7 +185,7 @@ h1 {
 
 .card {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
